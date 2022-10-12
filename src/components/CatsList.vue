@@ -1,7 +1,12 @@
 <template>
-  <div class="photos" v-if="catsList" data-testid="catsList">
-    <img v-for="cat of catsList" :src="cat.url" :ref="cat.id"
-  /></div>
+  <ul class="names" v-if="catsList.length > 0" data-testid="catsList">
+    <li
+      v-for="cat of catsList"
+      :ref="cat.id"
+      @click="$emit('catSelection', cat)"
+      >{{ cat.breeds[0].name }}</li
+    ></ul
+  >
 </template>
 <script>
 export default {
@@ -11,22 +16,13 @@ export default {
 };
 </script>
 <style scoped>
-.photos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: stretch;
-  padding: 0;
+ul {
+  list-style: none;
+  font-size: 1.125em;
 }
 
-.photos img {
-  display: block;
-  max-width: 400px;
-  flex: 0 0 auto;
-  background-color: #fff;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  border-radius: 10px;
+li {
+  margin-bottom: 0.225em;
+  cursor: pointer;
 }
 </style>

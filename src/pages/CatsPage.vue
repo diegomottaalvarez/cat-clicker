@@ -1,6 +1,10 @@
 <template>
   <div class="main-container">
-    <CatsList v-if="catsArray" :catsList="catsArray"></CatsList>
+    <CatsList
+      v-if="catsArray"
+      :catsList="catsArray"
+      @catSelection="setSelectedCat"
+    ></CatsList>
   </div>
 </template>
 
@@ -13,6 +17,7 @@ export default {
   data() {
     return {
       catsArray: null,
+      selectedCat: null,
     };
   },
   mounted() {
@@ -22,6 +27,11 @@ export default {
   methods: {
     async getCatsList() {
       this.catsArray = await getCats();
+    },
+
+    setSelectedCat(selectedCat) {
+      this.selectedCat = selectedCat;
+      console.log(selectedCat);
     },
   },
 };
