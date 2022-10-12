@@ -1,11 +1,14 @@
 <template>
   <h1>THE CAT CLICKER</h1>
+  <CatsPage></CatsPage>
 </template>
 
 <script>
+import CatsPage from './pages/CatsPage.vue';
+
 export default {
   name: 'App',
-  components: {},
+  components: { CatsPage },
 };
 </script>
 
