@@ -1048,22 +1048,22 @@ const filterBreeds = (cats) => {
 };
 
 const getCats = async () => {
-  //try {
-  // const data = await fetch(`${BASE_URL}images/search?limit=20&has_breeds=1`, {
-  //   headers: {
-  //     'x-api-key':
-  //       'live_D5fHsYnbm5OuVsCXU5gMkN5fhbCBjOiTza3dvD6bhBwcMhSH6WvzrnMivvawMET6',
-  //   },
+  try {
+    const data = await fetch(`${BASE_URL}images/search?limit=20&has_breeds=1`, {
+      headers: {
+        'x-api-key':
+          'live_D5fHsYnbm5OuVsCXU5gMkN5fhbCBjOiTza3dvD6bhBwcMhSH6WvzrnMivvawMET6',
+      },
+    });
+    const cats = await data.json();
+    return filterBreeds(cats);
+  } catch (error) {
+    console.error("Couldn't get cats");
+  }
+
+  // return new Promise((res, rej) => {
+  //   res(filterBreeds(catsListMock));
   // });
-  // const cats = await data.json();
-  // return filterBreeds(cats);
-  //  catch(error) {
-  //   console.error("Couldn't get cats");
-  //  }
-  //}
-  return new Promise((res, rej) => {
-    res(filterBreeds(catsListMock));
-  });
 };
 
 export { getCats, catsListMock, catDetailMock };

@@ -1,5 +1,10 @@
 <template>
   <div class="main-container" :class="selectedCat ? 'cat-selected' : ''">
+    <img
+      v-if="loading"
+      class="loading-spinner"
+      src="@/assets/images/spinner.svg"
+    />
     <div class="cat-list-container">
       <CatsList
         v-if="catsArray"
@@ -27,15 +32,18 @@ export default {
     return {
       catsArray: null,
       selectedCat: null,
+      loading: false,
     };
   },
   created() {
+    this.loading = true;
     this.getCatsList();
   },
 
   methods: {
     async getCatsList() {
       this.catsArray = await getCats();
+      this.loading = false;
     },
 
     setSelectedCat(selectedCat) {

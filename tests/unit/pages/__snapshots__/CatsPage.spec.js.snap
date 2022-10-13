@@ -2,6 +2,7 @@
 
 exports[`CatsPage component should match the snapshot 1`] = `
 <div class="main-container">
+  <!--v-if-->
   <div class="cat-list-container">
     <cats-list-stub catslist="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"></cats-list-stub>
   </div>

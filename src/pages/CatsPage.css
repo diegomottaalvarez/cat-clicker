@@ -13,6 +13,16 @@ div.main-container {
   width: 70vw;
 }
 
+.loading-spinner {
+  position: absolute;
+  width: 37%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
 @media (max-width: 1080px) {
   div.main-container {
     margin-left: 5rem;
@@ -43,5 +53,11 @@ div.main-container {
     opacity: 1;
     width: 100%;
     position: absolute;
+  }
+
+  .loading-spinner {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 95%;
   }
 }

@@ -6,7 +6,7 @@ ul {
 }
 
 li {
-  margin-bottom: 1rem;
+  margin-bottom: 1.35rem;
   cursor: pointer;
 }
 
@@ -14,12 +14,15 @@ li {
   width: 92%;
   font-size: 1.75rem;
   cursor: pointer;
+  padding: 0.5rem 1rem;
 }
 
-.cat-selection-button:hover {
-  transform: rotate(5deg);
-  /* transition: transform 0.3s; */
-  cursor: pointer;
+@media (min-width: 901px) {
+  .cat-selection-button:hover {
+    transform: rotate(5deg);
+    /* transition: transform 0.3s; */
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 900px) {
@@ -29,7 +32,7 @@ li {
   }
 
   li {
-    margin-bottom: 1.35rem;
+    margin-bottom: 0.35rem;
   }
 
   .cat-selection-button {
