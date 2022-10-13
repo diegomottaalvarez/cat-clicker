@@ -4,7 +4,7 @@
       <button class="leave-cat-button" @click="$emit('unselectCat')"
         >Leave me alone</button
       >
-      <CatImage :catDetail="catDetail" />
+      <CatImage :catDetail="catDetail" @catPetClick="addClick" />
       <CatPet :catClicks="catDetail.catClicks || 0" @catPetClick="addClick" />
     </div>
     <div class="cat-description-container">

@@ -20,4 +20,11 @@ describe('CatImage component', () => {
     const img = wrapper.find('img');
     expect(img.exists()).toBeTruthy();
   });
+
+  test('click in image should emit the add click event', async () => {
+    const img = wrapper.find('img');
+    await wrapper.vm.$nextTick(); // Wait until $emits have been handled
+    img.trigger('click');
+    expect(wrapper.emitted().catPetClick).toBeTruthy();
+  });
 });

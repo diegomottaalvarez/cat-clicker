@@ -4,6 +4,7 @@
     :src="catDetail.url"
     :alt="catDetail.breeds[0].name"
     class="cat-img"
+    @click="$emit('catPetClick')"
   />
 </template>
 
