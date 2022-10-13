@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit -u --watch"
+    "test:unit": "vue-cli-service test:unit",
+    "test:unit-watch-update": "vue-cli-service test:unit -u --watch"
   },
   "dependencies": {
     "core-js": "^3.8.3",

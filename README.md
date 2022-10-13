@@ -29,3 +29,9 @@ npm run build
 ```
 npm run test:unit
 ```
+
+### Run and watch unit tests updating snapshots
+
+```
+npm run test:unit-watch-update
+```
