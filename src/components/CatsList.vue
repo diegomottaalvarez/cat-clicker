@@ -1,10 +1,12 @@
 <template>
   <ul class="names" v-if="catsList.length > 0" data-testid="catsList">
-    <li
-      v-for="cat of catsList"
-      :ref="cat.id"
-      @click="$emit('catSelection', cat)"
-      >{{ cat.breeds[0].name }}</li
+    <li v-for="cat of catsList" :ref="cat.id" class="cat-name"
+      ><button
+        role="button"
+        class="cat-selection-button"
+        @click="selectCat(cat)"
+        >{{ cat.breeds[0].name }}</button
+      ></li
     ></ul
   >
 </template>
@@ -13,16 +15,14 @@ export default {
   props: {
     catsList: { type: Array },
   },
+  methods: {
+    selectCat(cat) {
+      window.scrollTo({ top, behavior: 'smooth' });
+      this.$emit('catSelection', cat);
+    },
+  },
 };
 </script>
 <style scoped>
-ul {
-  list-style: none;
-  font-size: 1.125em;
-}
-
-li {
-  margin-bottom: 0.225em;
-  cursor: pointer;
-}
+@import './CatsList.css';
 </style>

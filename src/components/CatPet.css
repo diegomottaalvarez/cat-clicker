@@ -1,0 +1,29 @@
+.pet-button {
+  width: 30rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 900px) {
+  .pet-button:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+  }
+}
+
+.pet-button img {
+  width: 2rem;
+}
+
+.heart-counter-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+  .pet-button {
+    width: 100%;
+  }
+}

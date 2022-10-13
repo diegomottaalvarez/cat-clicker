@@ -1,3 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CatDetail component should match the snapshot 1`] = `<h1>CatDetail</h1>`;
+exports[`CatDetail component should match the snapshot 1`] = `
+<div class="cat-detail">
+  <div class="cat-img-container"><button class="leave-cat-button">Leave me alone</button>
+    <cat-image-stub catdetail="[object Object]"></cat-image-stub>
+    <cat-pet-stub catclicks="0"></cat-pet-stub>
+  </div>
+  <div class="cat-description-container">
+    <h2 class="breed-name">Somali</h2>
+    <p class="cat-info">The Somali lives life to the fullest. He climbs higher, jumps farther, plays harder. Nothing escapes the notice of this highly intelligent and inquisitive cat. Somalis love the company of humans and other animals.</p><a class="link" href="https://vcahospitals.com/know-your-pet/cat-breeds/somali" target="_blank">Tell me more!</a>
+  </div>
+</div>
+`;

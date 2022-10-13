@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'AgentOrange';
+  src: local('AgentOrange'), url(../fonts/AgentOrange.ttf) format('truetype');
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+.link {
+  font-weight: bold;
+  color: #006983;
+}
+@media (min-width: 901px) {
+  button:hover {
+    background-color: red;
+  }
+}
+
+@media (max-width: 900px) {
+  #app {
+    margin-top: 1rem;
+  }
+}

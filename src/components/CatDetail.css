@@ -1,0 +1,49 @@
+.cat-detail {
+  display: flex;
+}
+
+.cat-img-container,
+.cat-description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.cat-img-container {
+  position: relative;
+}
+
+button.leave-cat-button {
+  width: 30rem;
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+  background-color: #006983;
+  color: #ffffff;
+}
+
+.breed-name {
+  font-size: 2rem;
+}
+
+@media (min-width: 901px) {
+  button.leave-cat-button:hover {
+    transform: scale(1.1);
+    background-color: #5ab7d4;
+    color: rgb(41, 41, 41);
+  }
+
+  .breed-name {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .cat-detail {
+    flex-direction: column;
+  }
+
+  button.leave-cat-button {
+    width: 100%;
+  }
+}

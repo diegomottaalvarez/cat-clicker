@@ -1,26 +1,35 @@
 <template>
-  <div class="main-container">
-    <CatsList
-      v-if="catsArray"
-      :catsList="catsArray"
-      @catSelection="setSelectedCat"
-    ></CatsList>
+  <div class="main-container" :class="selectedCat ? 'cat-selected' : ''">
+    <div class="cat-list-container">
+      <CatsList
+        v-if="catsArray"
+        :catsList="catsArray"
+        @catSelection="setSelectedCat"
+      /> </div
+    ><div class="cat-detail-container">
+      <CatDetail
+        v-if="selectedCat"
+        :catDetail="selectedCat"
+        @unselectCat="unselectCat"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import CatsList from '../components/CatsList.vue';
+import CatDetail from '../components/CatDetail.vue';
 import { getCats } from '@/helpers/getCats';
 
 export default {
-  components: { CatsList: CatsList },
+  components: { CatsList, CatDetail },
   data() {
     return {
       catsArray: null,
       selectedCat: null,
     };
   },
-  mounted() {
+  created() {
     this.getCatsList();
   },
 
@@ -31,15 +40,15 @@ export default {
 
     setSelectedCat(selectedCat) {
       this.selectedCat = selectedCat;
-      console.log(selectedCat);
+    },
+
+    unselectCat() {
+      this.selectedCat = null;
     },
   },
 };
 </script>
 
-<style>
-div .main-container {
-  display: flex;
-  max-width: 50vw;
-}
+<style scoped>
+@import './CatsPage.css';
 </style>

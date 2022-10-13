@@ -981,6 +981,56 @@ const catsListMock = [
   },
 ];
 
+const catDetailMock = {
+  breeds: [
+    {
+      weight: { imperial: '6 - 12', metric: '3 - 5' },
+      id: 'soma',
+      name: 'Somali',
+      cfa_url: 'http://cfa.org/Breeds/BreedsSthruT/Somali.aspx',
+      vetstreet_url: 'http://www.vetstreet.com/cats/somali',
+      vcahospitals_url:
+        'https://vcahospitals.com/know-your-pet/cat-breeds/somali',
+      temperament:
+        'Mischievous, Tenacious, Intelligent, Affectionate, Gentle, Interactive, Loyal',
+      origin: 'Somalia',
+      country_codes: 'SO',
+      country_code: 'SO',
+      description:
+        'The Somali lives life to the fullest. He climbs higher, jumps farther, plays harder. Nothing escapes the notice of this highly intelligent and inquisitive cat. Somalis love the company of humans and other animals.',
+      life_span: '12 - 16',
+      indoor: 0,
+      alt_names: 'Fox Cat, Long-Haired Abyssinian',
+      adaptability: 5,
+      affection_level: 5,
+      child_friendly: 3,
+      dog_friendly: 4,
+      energy_level: 5,
+      grooming: 3,
+      health_issues: 2,
+      intelligence: 5,
+      shedding_level: 4,
+      social_needs: 5,
+      stranger_friendly: 5,
+      vocalisation: 1,
+      experimental: 0,
+      hairless: 0,
+      natural: 0,
+      rare: 0,
+      rex: 0,
+      suppressed_tail: 0,
+      short_legs: 0,
+      wikipedia_url: 'https://en.wikipedia.org/wiki/Somali_(cat)',
+      hypoallergenic: 0,
+      reference_image_id: 'EPF2ejNS0',
+    },
+  ],
+  id: 'K4WzCAYWm',
+  url: 'https://cdn2.thecatapi.com/images/K4WzCAYWm.jpg',
+  width: 811,
+  height: 1217,
+};
+
 const filterBreeds = (cats) => {
   if (!cats) {
     return;
@@ -998,6 +1048,7 @@ const filterBreeds = (cats) => {
 };
 
 const getCats = async () => {
+  //try {
   // const data = await fetch(`${BASE_URL}images/search?limit=20&has_breeds=1`, {
   //   headers: {
   //     'x-api-key':
@@ -1005,10 +1056,14 @@ const getCats = async () => {
   //   },
   // });
   // const cats = await data.json();
+  // return filterBreeds(cats);
+  //  catch(error) {
+  //   console.error("Couldn't get cats");
+  //  }
+  //}
   return new Promise((res, rej) => {
     res(filterBreeds(catsListMock));
   });
-  return filterBreeds(cats);
 };
 
-export { getCats, catsListMock };
+export { getCats, catsListMock, catDetailMock };

@@ -2,25 +2,25 @@
 
 exports[`CatsList component should match the snapshot 1`] = `
 <ul class="names" data-testid="catsList">
-  <li>Burmese</li>
-  <li>Burmilla</li>
-  <li>Devon Rex</li>
-  <li>Devon Rex</li>
-  <li>Exotic Shorthair</li>
-  <li>Exotic Shorthair</li>
-  <li>Exotic Shorthair</li>
-  <li>Korat</li>
-  <li>Manx</li>
-  <li>Manx</li>
-  <li>Ocicat</li>
-  <li>Oriental</li>
-  <li>Oriental</li>
-  <li>Scottish Fold</li>
-  <li>Siamese</li>
-  <li>Somali</li>
-  <li>European Burmese</li>
-  <li>Somali</li>
-  <li>Tonkinese</li>
-  <li>Abyssinian</li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Burmese</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Burmilla</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Devon Rex</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Devon Rex</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Exotic Shorthair</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Exotic Shorthair</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Exotic Shorthair</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Korat</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Manx</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Manx</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Ocicat</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Oriental</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Oriental</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Scottish Fold</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Siamese</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Somali</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">European Burmese</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Somali</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Tonkinese</button></li>
+  <li class="cat-name"><button role="button" class="cat-selection-button">Abyssinian</button></li>
 </ul>
 `;

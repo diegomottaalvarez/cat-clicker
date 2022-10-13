@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CatImage component should match the snapshot 1`] = `<img src="https://cdn2.thecatapi.com/images/K4WzCAYWm.jpg" alt="Somali" class="cat-img">`;
